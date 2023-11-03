@@ -6,28 +6,29 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<form id="request" class="main_form">
+				{{ form_start(form, {'attr':{'id':'request','class':'main_form'}}) }}
+				{{ form_errors(form) }}
 						<div class="row">
 							<div class="col-md-12 ">
 								<h3>Contact Us</h3>
 							</div>
 							<div class="col-md-12 ">
-								<input class="contactus" placeholder="Name" type="type" name="Name">
+								{{ form_row(form.name, {'attr': {'class':'contactus', 'placeholder':'Name', 'type':'type', 'name':'Name'}}) }}
 							</div>
 							<div class="col-md-12">
-								<input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">
+								{{ form_row(form.phoneNumber, {'attr': {'class':'contactus', 'placeholder':'Phone Number', 'type':'type', 'name':'Phone Number'}}) }}
 							</div>
 							<div class="col-md-12">
-								<input class="contactus" placeholder="Email" type="type" name="Email">
+								{{ form_row(form.email, {'attr': {'class':'contactus', 'placeholder':'Email', 'type':'type', 'name':'Email'}}) }}
 							</div>
 							<div class="col-md-12">
-								<input class="contactusmess" placeholder="Message" type="type" message="Name">
+								{{ form_row(form.message, {'attr': {'class':'contactus', 'placeholder':'Message', 'type':'type', 'message':'Name'}}) }}
 							</div>
 							<div class="col-md-12">
-								<button class="send_btn">Send</button>
+								{{ form_row(form.Send, {'attr': {'class':'send_btn', 'type':'submit'}}) }}
 							</div>
 						</div>
-					</form>
+						{{ form_end(form) }}
 				</div>
 			</div>
 		</div>
