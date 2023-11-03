@@ -1,0 +1,29 @@
+<ul class="navbar-nav mr-auto">
+	<li class="nav-item {{ (app.request.attributes.get('_route') == 'index')  ? 'active': ''}}">
+		<a class="nav-link" href="{{ path('index') }}">Home</a>
+	</li>
+	<li class="nav-item {{ (app.request.attributes.get('_route') == 'about')  ? 'active': ''}}">
+		<a class="nav-link" href="{{ path('about') }}">About</a>
+	</li>
+	<li class="nav-item {{ (app.request.attributes.get('_route') == 'our_glasses')  ? 'active': ''}}">
+		<a class="nav-link" href="{{ path('our_glasses') }}">Our Glasses</a>
+	</li>
+	<li class="nav-item {{ (app.request.attributes.get('_route') == 'shop')  ? 'active': ''}}">
+		<a class="nav-link" href="{{ path('shop') }}">Shop</a>
+	</li>
+	<li class="nav-item {{ (app.request.attributes.get('_route') == 'contact')  ? 'active': ''}}">
+		<a class="nav-link" href="{{ path('contact') }}">Contact Us</a>
+	</li>
+	<li class="nav-item d_none login_btn">
+		<a class="nav-link" href="#">Login</a>
+	</li>
+	<li class="nav-item d_none">
+		<a class="nav-link" href="#">Register</a>
+	</li>
+	<li class="nav-item d_none sea_icon">
+		<a class="nav-link" href="#">
+			<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+			<i class="fa fa-search" aria-hidden="true"></i>
+		</a>
+	</li>
+</ul>
