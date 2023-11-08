@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login
+{% endblock %}
+{% block body %}
+	<div id="contact" class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<form id="request" class="main_form" method="post">
+						
+						{% if error %}
+							<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security')}}</div>
+						{% endif %}
+					
+
+
+						{# {% if app.user %}
+							<li class="nav-item">
+								<a class="nav-link" href="{{ path('app_logout') }}">
+									<i class="fa fa-sign-out sr-icons"></i>
+									{{ app.user.name }}
+									- Logout</a>
+							</li>
+						{% else %}
+							<li class="nav-item {{ (app.request.attributes.get('_route') == 'login') ? 'active': ''}}">
+								<a class="nav-link" href="{{ path('login') }}">Login</a>
+							</li>
+							<li class="nav-item {{ (app.request.attributes.get('_route') == 'register') ? 'active': ''}} ">
+							<a class="nav-link" href="{{ path('register') }}">Register</a>
+							</li>
+						{% endif %} #}
+
+					<div class="row">
+						<div class="col-md-12 ">
+							<h3>Login</h3>
+						</div>
+						<div class="col-md-12">
+							<input class="contactus" placeholder="Email" type="type" name="email">
+						</div>
+						<div class="col-md-12">
+							<input class="contactus" placeholder="Password" type="password" name="password">
+						</div>
+						<div class="col-md-12">
+						<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+						</div>
+						<div class="col-md-12">
+							<button type="submit" class="send_btn">Login</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
