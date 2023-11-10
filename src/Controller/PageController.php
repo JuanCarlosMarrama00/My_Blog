@@ -13,4 +13,11 @@ class PageController extends AbstractController
     {
         return $this->render('page/index.html.twig', []);
     }
+
+    #[Route('/profile', name: 'perfil')]
+    public function perfil(): Response
+    {
+        $this->denyAccessUnlessGranted('ROLE_USER');
+        return $this->render('perfil.html.twig', []);
+    }
 }

@@ -596,6 +596,18 @@ button {
      clear: both;
 }
 
+.perfil{
+     text-align: center;
+}
+
+.perfil img{
+     width: 300px;
+}
+
+#perfil{
+     margin-top: -4px;
+}
+
 .shop .titlepage p {
      color: #fff;
      font-size: 17px;
@@ -729,8 +741,7 @@ button {
 }
 
 .main_form .foto {
-     margin-bottom: 25px;
-     width: 100px;
+     width: 120px;
      height: 57px;
      background: transparent;
      color: #4b4b4c;
@@ -739,6 +750,11 @@ button {
      border-top: inherit;
      border-left: inherit;
      border-right: inherit;
+}
+
+.main_form label{
+     margin-right: 15px;
+     margin-left: -230px;
 }
 
 .main_form .contactusmess {

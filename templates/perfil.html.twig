@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+{% block title %}Perfil Personal{% endblock %}
+{% block body %}
+    <div class="perfil">
+        <h1>Perfil de {{ app.user.username }}</h1>
+            {% if app.user.foto %}
+                <img alt="fotoperfil" src="{{ asset('images/index/gallery/' ~ app.user.foto) }}">
+            {% else %}
+                <img alt="fotoperfil" src="{{ asset('images/index/gallery/sinfotoperfil.png') }}">   
+            {% endif %}
+        <h4><strong>Nombre:</strong> {{ app.user.name }}</h4>
+        <h4><strong>Email: </strong>{{ app.user.email }}</h4>
+    </div>
+{% endblock %}
