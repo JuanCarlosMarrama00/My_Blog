@@ -34,8 +34,15 @@
 		</a>
 	</li>
 	{% if app.user %}
-		<li class="nav-item {{ (app.request.attributes.get('_route') == 'login') ? 'active': ''}}">
-		<a class="nav-link"><img alt="fotoperfil" src="{{ asset('images/index/gallery/' ~ app.user.foto) }}">{{ app.user.username }}</a>
-	</li>
+		{% if app.user.foto %}
+			<li class="nav-item {{ (app.request.attributes.get('_route') == 'login') ? 'active': ''}}">
+			<a class="nav-link"><img alt="fotoperfil" src="{{ asset('images/index/gallery/' ~ app.user.foto) }}">{{ app.user.username }}</a>
+			</li>
+			{% else %}
+				<li class="nav-item {{ (app.request.attributes.get('_route') == 'login') ? 'active': ''}}">
+				<a class="nav-link"><img alt="fotoperfil" src="{{ asset('images/index/gallery/sinfotoperfil.png') }}">{{ app.user.username }}</a>
+				</li>
+		{% endif %}
+		
 	{% endif %}
 </ul>

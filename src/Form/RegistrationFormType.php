@@ -46,6 +46,7 @@ class RegistrationFormType extends AbstractType
                     new File([
                         'mimeTypes' => [
                             'image/jpeg',
+                            'image/jpg',
                             'image/png'
                         ],
                         'mimeTypesMessage' => 'Please upload a valid image file',
